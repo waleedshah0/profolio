@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Muhammad Waleed Ahmad — AI Engineer Portfolio
 
 A unique, fully responsive personal portfolio built with **Next.js 14 (App Router)**, **TypeScript**, and **Tailwind CSS**. Showcases Computer Vision, Generative AI, and Agentic AI work — including the live products **Fortix AI** and **Sprixle**.
@@ -153,7 +154,6 @@ npm run start    # runs on PORT 3000; reverse-proxy with nginx/Caddy as needed
 
 No heavy UI library — every visual is hand-built for a unique look and a tiny bundle (~101 kB First Load JS).
 
----
 
 ## 📄 License
 
