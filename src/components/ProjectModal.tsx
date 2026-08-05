@@ -31,6 +31,9 @@ export default function ProjectModal({
 
   if (!project) return null;
 
+  const hasImages = project.images.length > 0;
+  const showGallery = hasImages && !project.video;
+
   return (
     <div
       className="fixed inset-0 z-[100] flex items-end justify-center p-0 sm:items-center sm:p-6"
@@ -62,18 +65,29 @@ export default function ProjectModal({
 
         {/* scrollable content */}
         <div className="overflow-y-auto no-scrollbar">
-          {/* image gallery */}
+          {/* media */}
           <div className="relative aspect-[16/10] w-full overflow-hidden bg-ink-800">
             <div
               className={`absolute inset-0 bg-gradient-to-br ${project.accent}`}
             />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={project.images[imgIdx]}
-              alt={`${project.name} screenshot ${imgIdx + 1}`}
-              className="relative h-full w-full object-cover object-top"
-            />
-            {project.images.length > 1 && (
+            {project.video ? (
+              <video
+                key={project.video}
+                src={project.video}
+                controls
+                playsInline
+                preload="metadata"
+                className="relative h-full w-full object-contain bg-ink-950"
+              />
+            ) : (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={project.images[imgIdx]}
+                alt={`${project.name} screenshot ${imgIdx + 1}`}
+                className="relative h-full w-full object-cover object-top"
+              />
+            )}
+            {showGallery && project.images.length > 1 && (
               <>
                 <button
                   onClick={() =>

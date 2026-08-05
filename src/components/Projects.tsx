@@ -91,21 +91,41 @@ function ProjectCard({
       className="reveal group relative overflow-hidden rounded-3xl border border-white/10 bg-ink-900/40 transition-all duration-500 hover:-translate-y-1.5 hover:border-white/25"
       data-reveal-delay={delay}
     >
-      {/* Image */}
-      <button
+      {/* Media preview */}
+      <div
+        role="button"
+        tabIndex={0}
         onClick={onOpen}
-        className="relative block aspect-[16/10] w-full overflow-hidden"
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            onOpen();
+          }
+        }}
+        className="relative aspect-[16/10] w-full cursor-pointer overflow-hidden"
         aria-label={`Open ${project.name} details`}
       >
         <div
           className={`absolute inset-0 bg-gradient-to-br ${project.accent}`}
         />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={project.images[0]}
-          alt={`${project.name} screenshot`}
-          className="h-full w-full object-cover object-top opacity-90 transition-all duration-700 group-hover:scale-[1.04] group-hover:opacity-100"
-        />
+        {project.video ? (
+          <video
+            src={project.video}
+            muted
+            loop
+            playsInline
+            autoPlay
+            preload="metadata"
+            className="relative h-full w-full object-cover object-center opacity-90 transition-all duration-700 group-hover:scale-[1.04] group-hover:opacity-100 pointer-events-none"
+          />
+        ) : (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={project.images[0]}
+            alt={`${project.name} screenshot`}
+            className="h-full w-full object-cover object-top opacity-90 transition-all duration-700 group-hover:scale-[1.04] group-hover:opacity-100"
+          />
+        )}
         {/* overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/30 to-transparent" />
 
@@ -120,13 +140,23 @@ function ProjectCard({
           </span>
         )}
 
+        {/* demo badge for video projects */}
+        {project.video && !project.live && (
+          <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-ink-950/70 px-2.5 py-1 text-[11px] font-semibold text-slate-200 backdrop-blur">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+            DEMO
+          </span>
+        )}
+
         {/* expand hint */}
         <span className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-ink-950/70 text-white opacity-0 backdrop-blur transition-all duration-300 group-hover:opacity-100">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
           </svg>
         </span>
-      </button>
+      </div>
 
       {/* Body */}
       <div className="relative p-6">

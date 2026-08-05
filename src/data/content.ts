@@ -30,6 +30,7 @@ export type Project = {
   highlights: string[];
   stack: string[];
   images: string[];
+  video?: string; // optional demo video (public path)
   link?: string;
   live?: boolean;
   accent: string; // tailwind gradient classes
@@ -107,6 +108,99 @@ export const projects: Project[] = [
     images: ["/projects/faceswap-1.png", "/projects/faceswap-2.png"],
     live: false,
     accent: "from-emerald-500/30 to-teal-500/10",
+  },
+  {
+    slug: "wakanda-gym",
+    name: "Wakanda GYM",
+    category: "Computer Vision · Pose Estimation",
+    tagline: "AI workout form analysis with real-time rep counting",
+    description:
+      "A pose-estimation system that analyzes workout form in real time using OpenCV and YOLO-based pose models. Tracks body keypoints during exercises like squats to count reps and assess movement quality.",
+    highlights: [
+      "Real-time pose estimation for workout analysis",
+      "Automatic squat rep counting from video",
+      "Keypoint tracking with YOLO pose models + OpenCV",
+      "Visual overlay of skeleton and form feedback",
+    ],
+    stack: ["OpenCV", "YOLO26", "Pose Estimation", "Python"],
+    images: [],
+    video: "/projects/wakanda-gym.mp4",
+    live: false,
+    accent: "from-amber-500/30 to-yellow-500/10",
+  },
+  {
+    slug: "robbery-detection",
+    name: "Robbery Detection",
+    category: "Computer Vision · Security",
+    tagline: "Zone-based intrusion alerts with facial recognition",
+    description:
+      "A surveillance pipeline that lets you define restricted zones and monitors them with facial recognition. When an unknown person enters a protected zone, the system triggers an alarm in real time.",
+    highlights: [
+      "Custom zone definition for restricted areas",
+      "Facial recognition to distinguish known vs unknown people",
+      "Real-time alarm when an unknown person enters the zone",
+      "End-to-end detection and alert pipeline",
+    ],
+    stack: ["OpenCV", "YOLO", "Facial Recognition", "Python"],
+    images: [],
+    video: "/projects/robbery-detection.mp4",
+    live: false,
+    accent: "from-red-500/30 to-rose-500/10",
+  },
+  {
+    slug: "tennis-analysis",
+    name: "Tennis Analysis",
+    category: "Computer Vision · Sports Analytics",
+    tagline: "Automated analysis of tennis play from video",
+    description:
+      "A computer vision system that analyzes tennis matches from video — tracking players, ball movement, and play dynamics to deliver actionable sports insights.",
+    highlights: [
+      "Player and ball tracking across rally sequences",
+      "Automated tennis play analysis from raw video",
+      "Sports analytics overlays for performance review",
+    ],
+    stack: ["OpenCV", "YOLO", "Object Tracking", "Python"],
+    images: [],
+    video: "/projects/tennis-analysis.mp4",
+    live: false,
+    accent: "from-lime-500/30 to-green-500/10",
+  },
+  {
+    slug: "foot-size",
+    name: "Foot Size Measurement",
+    category: "Computer Vision · Measurement",
+    tagline: "Accurate foot length & width from images",
+    description:
+      "A computer vision pipeline that estimates accurate foot measurements from images using pose estimation and segmentation models combined with DeepSORT tracking and YOLOv11 detection. Combines keypoint detection with instance segmentation to isolate the foot region, then derives real-world length/width measurements using reference-object calibration.",
+    highlights: [
+      "Keypoint detection + instance segmentation to isolate the foot",
+      "YOLOv11 detection with DeepSORT multi-object tracking",
+      "Reference-object calibration for real-world length/width",
+      "End-to-end measurement pipeline from a single image/video",
+    ],
+    stack: ["YOLOv11", "DeepSORT", "Pose Estimation", "Segmentation", "OpenCV"],
+    images: [],
+    video: "/projects/foot-size.mp4",
+    live: false,
+    accent: "from-sky-500/30 to-cyan-500/10",
+  },
+  {
+    slug: "3d-room",
+    name: "3D Room Reconstruction",
+    category: "Computer Vision · 3D Reconstruction",
+    tagline: "Monocular images to editable 3D room layouts",
+    description:
+      "A 3D reconstruction pipeline using Droid-SLAM and Spatial LM that generates precise 3D point clouds from monocular images with sub-2cm error, then reconstructs them into editable 3D room layouts.",
+    highlights: [
+      "Droid-SLAM + Spatial LM for monocular 3D reconstruction",
+      "Precise point clouds with <2cm reconstruction error",
+      "Editable 3D room layouts from casual camera footage",
+    ],
+    stack: ["Droid-SLAM", "Spatial LM", "3D Reconstruction", "Python"],
+    images: [],
+    video: "/projects/3d-room.mp4",
+    live: false,
+    accent: "from-fuchsia-500/30 to-purple-500/10",
   },
 ];
 
@@ -193,11 +287,6 @@ export const navLinks = [
 ];
 
 export const otherProjects = [
-  {
-    name: "3D Room Reconstruction",
-    desc: "Droid-SLAM + Spatial LM generating precise 3D point clouds from monocular images with <2cm error, reconstructed into editable 3D room layouts.",
-    stack: ["Droid-SLAM", "Spatial LM", "Python"],
-  },
   {
     name: "DeepTutor AI",
     desc: "Domain-specific chatbot using gemma3n 2B + RAG for deep-learning Q&A with multimodal input (facial expression + tone analysis), improving relevance by 28%.",
