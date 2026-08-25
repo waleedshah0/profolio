@@ -11,12 +11,12 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/muhammad-waleed-ahmad/",
   linkedinHandle: "muhammad-waleed-ahmad",
   summary:
-    "Results-driven AI Engineer with 1+ year of hands-on experience building and deploying production-grade Computer Vision, Generative AI, and Agentic AI systems. Proven track record delivering real-world products — including a live multi-site surveillance platform (Fortix AI) and a psychology AI assistant (Sprixle) — using PyTorch, YOLOv11/v26, LangChain, LangGraph, and RAG architectures. Skilled in end-to-end MLOps: data pipelines, LLM fine-tuning, vector databases, multi-agent workflows, and model deployment with FastAPI and Docker on AWS.",
+    "Results-driven AI Engineer with 2+ years of hands-on experience building and deploying production-grade Computer Vision, Generative AI, and Agentic AI systems. Proven track record delivering real-world products — including a live multi-site surveillance platform (Fortix AI) and a psychology AI assistant (Sprixle) — using PyTorch, YOLOv11/v26, LangChain, LangGraph, and RAG architectures. Skilled in end-to-end MLOps: data pipelines, LLM fine-tuning, vector databases, multi-agent workflows, and model deployment with FastAPI and Docker on AWS.",
 };
 
 export const stats = [
   { value: "2", label: "Live AI products shipped", suffix: "" },
-  { value: "1", label: "Years hands-on AI", suffix: "+" },
+  { value: "2", label: "Years hands-on AI", suffix: "+" },
   { value: "50K", label: "Video frames / day", suffix: "" },
   { value: "99.5", label: "Production uptime", suffix: "%" },
 ];
@@ -253,26 +253,26 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
-    role: "AI Engineer",
+    role: "Computer Vision Engineer",
     company: "Shayan Solutions",
     location: "Lahore, Pakistan",
-    period: "Sep 2025 – Present",
+    period: "Oct 2024 – Present",
     current: true,
     points: [
-      "Designed and optimized real-time object detection & tracking pipelines using YOLOv11/v26/SAM3 with ByteTrack, achieving >92% mAP across 6 detection categories (weapons, fire, PPE, shoplifting, vehicles, faces).",
-      "Built end-to-end multi-agent workflows with LangChain and LangGraph using RAG + vector databases, reducing average query response latency by 40%.",
-      "Continuously fine-tuned LLMs with Hugging Face on domain datasets; deployed via FastAPI + Docker on AWS with GitHub Actions CI/CD at 99.5% uptime.",
-      "Engineered data pipelines handling 50,000+ video frames/day, improving inference throughput by 35% via batch optimization and TensorRT.",
+      "Designed, trained, and optimized real-time object detection & tracking pipelines using YOLOv11/YOLOv26/SAM3 with ByteTrack, achieving >92% mAP on custom surveillance datasets across 6 detection categories (weapons, fire, PPE, shoplifting, vehicles, faces).",
+      "Built end-to-end multi-agent workflows using LangChain and LangGraph with RAG architectures and vector databases, reducing average query response latency by 40% through optimized retrieval strategies and context window management.",
+      "Continuously fine-tuned LLMs using Hugging Face on domain-specific datasets; deployed models via FastAPI and Docker on AWS with GitHub Actions CI/CD, maintaining 99.5% uptime across production systems.",
+      "Engineered feature engineering and data preprocessing pipelines handling 50,000+ video frames per day, improving model inference throughput by 35% through batch optimization and TensorRT integration.",
     ],
   },
   {
-    role: "Data Scientist Intern",
+    role: "Data Scientist",
     company: "Fiverivers Technologies",
     location: "Lahore, Pakistan",
-    period: "Jun 2025 – Sep 2025",
+    period: "Jun 2024 – Oct 2024",
     points: [
-      "Developed end-to-end ML pipelines for 3 client classification & regression projects with scikit-learn, improving F1 scores by an average of 18%.",
-      "Fine-tuned 2 LLMs and 1 VLM with Hugging Face in GPU environments (Colab/Kaggle); built RAG-based NLP systems with LangChain/LangGraph processing 10,000+ documents.",
+      "Developed end-to-end ML pipelines for 3 client classification and regression projects — covering data collection, cleaning, feature selection, and model evaluation with scikit-learn — improving F1 scores by an average of 18% over baseline models.",
+      "Fine-tuned 2 LLMs and 1 VLM using Hugging Face on Google Colab and Kaggle (GPU environments); built RAG-based NLP systems with LangChain and LangGraph deployed for real-world client use, processing 10,000+ documents.",
     ],
   },
 ];
