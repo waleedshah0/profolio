@@ -5,7 +5,7 @@ import { profile } from "@/data/content";
 const marqueeItems = [
   "PyTorch", "LangChain", "LangGraph", "YOLOv11", "YOLOv26", "Hugging Face",
   "FastAPI", "Docker", "AWS", "RAG", "Computer Vision", "Agentic AI",
-  "TensorRT", "ByteTrack", "OpenCV", "Kubernetes", "CI/CD", "LLM Fine-Tuning",
+  "TensorRT", "ByteTrack", "OpenCV", "MediaPipe", "PaddleOCR", "CI/CD", "LLM Fine-Tuning, Kubernetes",
 ];
 
 const pillars = [
@@ -78,7 +78,7 @@ export default function About() {
             <HighlightCard
               index="01"
               title="Delivered 2 live AI products"
-              desc="Fortix AI & Sprixle shipped within my first year as a professional."
+              desc="Delivered live production AI products, including Fortix AI, within my first year as a professional."
               accent="from-lime-400/20"
             />
             <HighlightCard

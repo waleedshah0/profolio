@@ -17,9 +17,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Muhammad Waleed Ahmad — AI Engineer",
+  title: "Muhammad Waleed Ahmad — Computer Vision Engineer",
   description:
-    "AI Engineer specializing in Computer Vision, Generative AI, and Agentic AI. Builder of Fortix AI and Sprixle.",
+    "Computer Vision Engineer with 1 year of hands-on experience in Computer Vision, Generative AI, and Agentic AI. Builder of Fortix AI.",
   keywords: [
     "AI Engineer",
     "Computer Vision",
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Muhammad Waleed Ahmad" }],
   openGraph: {
-    title: "Muhammad Waleed Ahmad — AI Engineer",
+    title: "Muhammad Waleed Ahmad — Computer Vision Engineer",
     description:
-      "AI Engineer building production Computer Vision, Generative AI, and Agentic AI systems.",
+      "Computer Vision Engineer with 1 year of experience building production Computer Vision, Generative AI, and Agentic AI systems.",
     type: "website",
   },
 };

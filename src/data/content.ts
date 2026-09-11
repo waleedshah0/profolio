@@ -1,7 +1,7 @@
 export const profile = {
   name: "Muhammad Waleed Ahmad",
   firstName: "Waleed",
-  roles: ["AI Engineer", "Computer Vision", "Generative AI", "Agentic AI"],
+  roles: ["Computer Vision Engineer", "Deep Learning", "Generative AI", "Agentic AI"],
   tagline: "I build production-grade AI systems — from real-time vision to autonomous agents.",
   location: "Lahore, Pakistan",
   phone: "(+92) 303-8753204",
@@ -11,12 +11,12 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/muhammad-waleed-ahmad/",
   linkedinHandle: "muhammad-waleed-ahmad",
   summary:
-    "Results-driven AI Engineer with 2+ years of hands-on experience building and deploying production-grade Computer Vision, Generative AI, and Agentic AI systems. Proven track record delivering real-world products — including a live multi-site surveillance platform (Fortix AI) and a psychology AI assistant (Sprixle) — using PyTorch, YOLOv11/v26, LangChain, LangGraph, and RAG architectures. Skilled in end-to-end MLOps: data pipelines, LLM fine-tuning, vector databases, multi-agent workflows, and model deployment with FastAPI and Docker on AWS.",
+    "Results-driven Computer Vision Engineer with 1 year of hands-on experience building and deploying production-grade computer vision, generative AI, and agentic AI systems. Proven track record delivering real-world products — including a live multi-site surveillance platform (Fortix AI) — using PyTorch, YOLOv11/v26, ByteTrack, OpenCV, LangChain, LangGraph, and RAG architectures. Skilled in end-to-end computer vision MLOps: data annotation, model training and optimization, real-time inference, and deployment with FastAPI and Docker on AWS. Passionate about solving high-impact visual perception problems with intelligent automation.",
 };
 
 export const stats = [
   { value: "2", label: "Live AI products shipped", suffix: "" },
-  { value: "2", label: "Years hands-on AI", suffix: "+" },
+  { value: "1", label: "Year of AI experience", suffix: "" },
   { value: "50K", label: "Video frames / day", suffix: "" },
   { value: "99.5", label: "Production uptime", suffix: "%" },
 ];
@@ -94,17 +94,17 @@ export const projects: Project[] = [
   },
   {
     slug: "faceswap",
-    name: "Face Swap Studio",
+    name: "Face Swapper Studio",
     category: "Generative AI · Vision",
     tagline: "Developing identities, frame by frame",
     description:
-      "A generative face-swap studio for combining two images or videos by overlaying one face onto another — “developing identities, frame by frame.” Handles image and video pipelines.",
+      "An image and video face-swapping application using InsightFace Inswapper to map and swap faces onto target subjects. GFPGAN and RestoreFormer restore and sharpen swapped faces across varied lighting and pose conditions.",
     highlights: [
       "Image & video face swap pipelines",
-      "Clean studio interface for upload, preview, and export",
-      "Frame-accurate identity transfer",
+      "InsightFace Inswapper for face mapping and swapping",
+      "GFPGAN + RestoreFormer for face restoration and enhancement",
     ],
-    stack: ["Generative AI", "Computer Vision", "Python", "FastAPI"],
+    stack: ["InsightFace (Inswapper)", "GFPGAN", "RestoreFormer", "Python", "OpenCV"],
     images: ["/projects/faceswap-1.png", "/projects/faceswap-2.png"],
     live: false,
     accent: "from-emerald-500/30 to-teal-500/10",
@@ -212,6 +212,15 @@ export type SkillGroup = {
 
 export const skillGroups: SkillGroup[] = [
   {
+    title: "Computer Vision",
+    icon: "brain",
+    skills: [
+      "Object Detection & Tracking", "Real-Time Inference", "Vision Transformers",
+      "Multimodal AI", "Image Segmentation", "3D Reconstruction", "Data Annotation",
+      "CVAT", "3D Slicer", "FFmpeg", "GStreamer", "PaddleOCR", "EasyOCR", "Tesseract OCR",
+    ],
+  },
+  {
     title: "AI / ML",
     icon: "brain",
     skills: [
@@ -226,7 +235,7 @@ export const skillGroups: SkillGroup[] = [
     icon: "layers",
     skills: [
       "PyTorch", "TensorFlow", "Scikit-learn", "Ultralytics YOLO (v11/v26/YOLOE)",
-      "OpenCV", "LangChain", "LangGraph", "Hugging Face Transformers",
+      "OpenCV", "MediaPipe", "LangChain", "LangGraph", "Hugging Face Transformers",
       "Keras", "FastAPI", "NumPy", "Pandas", "N8N",
     ],
   },
@@ -256,7 +265,7 @@ export const experiences: Experience[] = [
     role: "Computer Vision Engineer",
     company: "Shayan Solutions",
     location: "Lahore, Pakistan",
-    period: "Oct 2024 – Present",
+    period: "Sep 2025 – Present",
     current: true,
     points: [
       "Designed, trained, and optimized real-time object detection & tracking pipelines using YOLOv11/YOLOv26/SAM3 with ByteTrack, achieving >92% mAP on custom surveillance datasets across 6 detection categories (weapons, fire, PPE, shoplifting, vehicles, faces).",
@@ -266,10 +275,10 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    role: "Data Scientist",
+    role: "Data Scientist Intern",
     company: "Fiverivers Technologies",
     location: "Lahore, Pakistan",
-    period: "Jun 2024 – Oct 2024",
+    period: "Jun 2025 – Sep 2025",
     points: [
       "Developed end-to-end ML pipelines for 3 client classification and regression projects — covering data collection, cleaning, feature selection, and model evaluation with scikit-learn — improving F1 scores by an average of 18% over baseline models.",
       "Fine-tuned 2 LLMs and 1 VLM using Hugging Face on Google Colab and Kaggle (GPU environments); built RAG-based NLP systems with LangChain and LangGraph deployed for real-world client use, processing 10,000+ documents.",
@@ -287,6 +296,16 @@ export const navLinks = [
 ];
 
 export const otherProjects = [
+  {
+    name: "ANPR System",
+    desc: "End-to-end license plate recognition using YOLOv11, ByteTrack, and PaddleOCR. Recognizes each vehicle once per pass, ingests RTSP/video streams with FFmpeg, and serves results through FastAPI for real-time querying and logging.",
+    stack: ["YOLOv11", "PaddleOCR", "ByteTrack", "FFmpeg", "FastAPI"],
+  },
+  {
+    name: "Advanced Air Drawing",
+    desc: "Gesture-controlled virtual canvas using MediaPipe hand tracking, with color selection, adjustable brush thickness, a gesture-based eraser, and canvas clearing through an open-palm gesture or keyboard shortcut.",
+    stack: ["MediaPipe", "OpenCV", "Python", "Real-Time Hand Tracking"],
+  },
   {
     name: "DeepTutor AI",
     desc: "Domain-specific chatbot using gemma3n 2B + RAG for deep-learning Q&A with multimodal input (facial expression + tone analysis), improving relevance by 28%.",
