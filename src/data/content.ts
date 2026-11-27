@@ -11,12 +11,12 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/muhammad-waleed-ahmad/",
   linkedinHandle: "muhammad-waleed-ahmad",
   summary:
-    "Results-driven Computer Vision Engineer with 1 year of hands-on experience building and deploying production-grade computer vision, generative AI, and agentic AI systems. Proven track record delivering real-world products — including a live multi-site surveillance platform (Fortix AI) — using PyTorch, YOLOv11/v26, ByteTrack, OpenCV, LangChain, LangGraph, and RAG architectures. Skilled in end-to-end computer vision MLOps: data annotation, model training and optimization, real-time inference, and deployment with FastAPI and Docker on AWS. Passionate about solving high-impact visual perception problems with intelligent automation.",
+    "Results-driven Computer Vision Engineer with 1+ year of hands-on experience building and deploying production-grade computer vision, generative AI, and agentic AI systems. Proven track record delivering real-world products — including a live multi-site surveillance platform (Fortix AI) — using PyTorch, YOLOv11/v26, ByteTrack, OpenCV, LangChain, LangGraph, and RAG architectures. Skilled in end-to-end computer vision MLOps: data annotation, model training and optimization, real-time inference, and deployment with FastAPI and Docker on AWS. Passionate about solving high-impact visual perception problems with intelligent automation.",
 };
 
 export const stats = [
   { value: "2", label: "Live AI products shipped", suffix: "" },
-  { value: "1", label: "Year of AI experience", suffix: "" },
+  { value: "1+", label: "Years of AI experience", suffix: "" },
   { value: "50K", label: "Video frames / day", suffix: "" },
   { value: "99.5", label: "Production uptime", suffix: "%" },
 ];
@@ -55,6 +55,25 @@ export const projects: Project[] = [
     link: "https://www.fortixai.io/",
     live: true,
     accent: "from-rose-500/30 to-orange-500/10",
+  },
+  {
+    slug: "restaurant-table-management",
+    name: "Restaurant Table Management",
+    category: "Computer Vision · Hospitality",
+    tagline: "AI-powered table cleaning, reservation, and occupancy management",
+    description:
+      "A vision-based restaurant operations system that monitors table status, supports reservation and occupancy tracking, and helps management assess staff behavior. Built as a real-world business use case for faster, more consistent floor operations.",
+    highlights: [
+      "Table cleaning status monitoring from live video",
+      "Table reservation and occupancy tracking",
+      "Vision-based staff behavior monitoring",
+      "Actionable operational visibility for restaurant management",
+    ],
+    stack: ["Computer Vision", "YOLO", "Object Detection", "Tracking", "Python"],
+    images: [],
+    video: "/projects/Restaurant Table Management.mp4",
+    live: false,
+    accent: "from-orange-500/30 to-amber-500/10",
   },
   {
     slug: "sprixle",
@@ -262,11 +281,22 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
+    role: "AI/ML Engineer",
+    company: "Kandrix Lab",
+    location: "Lahore, Pakistan",
+    period: "Sep 2026 – Present",
+    current: true,
+    points: [
+      "Develop computer vision solutions for real-world business use cases.",
+      "Build vision-based systems to monitor table cleaning status and support reservation and occupancy tracking.",
+      "Develop vision-based staff behavior monitoring for restaurant operations.",
+    ],
+  },
+  {
     role: "Computer Vision Engineer",
     company: "Shayan Solutions",
     location: "Lahore, Pakistan",
-    period: "Sep 2025 – Present",
-    current: true,
+    period: "Sep 2025 – Sep 2026",
     points: [
       "Designed, trained, and optimized real-time object detection & tracking pipelines using YOLOv11/YOLOv26/SAM3 with ByteTrack, achieving >92% mAP on custom surveillance datasets across 6 detection categories (weapons, fire, PPE, shoplifting, vehicles, faces).",
       "Built end-to-end multi-agent workflows using LangChain and LangGraph with RAG architectures and vector databases, reducing average query response latency by 40% through optimized retrieval strategies and context window management.",

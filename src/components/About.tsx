@@ -95,7 +95,7 @@ export default function About() {
             />
 
             <a
-              href="/Muhammad_Waleed_Ahmad_Resume_CV.pdf"
+              href="/Muhammad_Waleed_Ahmad_Resume_CV1.pdf"
               className="glass card-hover flex items-center justify-between rounded-2xl p-5"
             >
               <div>
